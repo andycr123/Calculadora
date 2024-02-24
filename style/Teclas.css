@@ -6,22 +6,29 @@
 }
 
 :root{
-    --primary:rgb(9, 12, 49);
-    --secundary:rgb(21, 23, 60);
-    --tercery:rgb(230, 57, 74);
-    --four:rgb(240, 248, 255);
+    --onee:rgb(14, 12, 65);
+    --twoo:rgb(228, 123, 18);
+    --three:rgb(21, 23, 60);
+    --four:rgb(230, 57, 74);
+    --five:rgb(240, 248, 255);
+    --six:rgb(33, 236, 247);
+    --seven:rgba(33, 197, 247, 0.539);
 }
 
 body {
     min-height: 100vh;
-    background-color: var(--primary) ;
+    background-color: var(--twoo) ;
     display: grid;
     place-items: center;
 }
 
+button:active {
+    background-color: var(--five);
+}
+
 .calculadora {
-    background-color: var(--secundary);
-    color: var(--four);
+    background-color: var(--onee);
+    color: var(--five);
     width: 350px;
     max-width: 100%;
     padding: 1.5rem;
@@ -29,12 +36,14 @@ body {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
 }
 
 
 .pantalla {
     grid-column:  1 / -1;
-    background-color: var(--primary);
+    background-color: var(--onee);
     padding: 1.5rem;
     font-size: 2rem;
     text-align: right;
@@ -45,5 +54,34 @@ body {
 }
 
 .btn {
-    
+  background-color: var(--onee);
+  color: var(--five);
+  border: 0;  
+  padding: 1.5rem .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
 }
+
+
+
+.btn:hover{
+    background-color: var(--four);
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: var(--seven) ;
+}
+
+#igual:hover {
+    background-color: var(--six);
+}
+
